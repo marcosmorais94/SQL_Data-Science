@@ -1,0 +1,24 @@
+SELECT * FROM cap02_aula.tb_navios;
+
+# Exercício 1 - Quais embarcações possuem pontuação de risco igual a 310?
+SELECT * FROM cap02_aula.tb_navios
+WHERE pontuacao_risco = 310;
+
+# Exercício 2 - Quais embarcações têm classificação de risco A e índice de conformidade maior ou igual a 95%?
+SELECT * FROM cap02_aula.tb_navios
+WHERE classificacao_risco = 'A' AND indice_conformidade >= 95;  
+
+# Exercício 3 - Quais embarcações têm classificação de risco C ou D e índice de conformidade menor ou igual a 95%?
+SELECT * FROM cap02_aula.tb_navios
+WHERE (classificacao_risco = 'C' OR classificacao_risco = 'D') AND indice_conformidade <= 95; 
+
+# Exercício 4 - Quais embarcações têm classificações de risco A ou pontuação de risco igual a 0?
+SELECT * FROM cap02_aula.tb_navios
+WHERE classificacao_risco = 'A' OR pontuacao_risco = 0;
+
+# [Desafio] Exercício 5 - Quais embarcações foram inspecionadas em Dezembro de 2016?
+SELECT * FROM cap02_aula.tb_navios
+WHERE mes_ano = '12/2016';
+
+SELECT * FROM cap02_aula.tb_navios
+WHERE temporada LIKE '%Dezembro 2016'; #Qualquer coisa que tiver Dezembro 2016;
