@@ -1,4 +1,4 @@
-# Análise Exploratória dos Daos - COVID-19
+# Análise Exploratória dos Dados - COVID-19
 
 # Ordenando os dados por nome ou número da coluna
 select * from cap07.covid_mortes order by location, date;
